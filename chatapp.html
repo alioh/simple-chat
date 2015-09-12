@@ -1,0 +1,18 @@
+<head>
+  <title>Chatter</title>
+</head>
+
+<body>
+	{{> loginButtons }}
+	<h1>Welcome to Chatter!</h1>
+
+	{{> chat}}
+</body>
+
+<template name="chat">
+	{{#each messages}}
+		<p>{{text}}</p>
+	{{/each}}
+	<textarea id="textbox"></textarea>
+	<p><button class="clickable">Send</button></p>
+</template>
